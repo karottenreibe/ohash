@@ -13,8 +13,8 @@ task :manifest do
     sh 'vim Manifest.txt'
 end
 
-task :release => [:clean, :compile] do
-    sh "vim HISTORY.txt"
+task :deploy do
+    sh "vim History.txt"
     sh "vim README.txt"
     sh "vim ohash.gemspec"
 
