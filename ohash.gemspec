@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.date = %q{2009-07-31}
   s.description = %q{An OpenStruct replacement since I hate OpenStruct}
   s.email = %q{karottenreibe@gmail.com}
-  s.files = ["HISTORY.txt", "README.txt", "LICENSE.txt", "lib/ohash.rb", "ohash.gemspec"]
+  s.files = ["History.txt", "README.txt", "LICENSE.txt", "lib/ohash.rb", "ohash.gemspec"]
   s.has_rdoc = false
   s.homepage = %q{http://github.com/karottenreibe/ohash}
   s.rubygems_version = %q{1.3.0}
