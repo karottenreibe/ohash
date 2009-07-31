@@ -1,0 +1,4 @@
+History.txt
+LICENSE.txt
+README.txt
+lib/ohash.rb
