@@ -1,3 +1,8 @@
+0.0.3
+=====
+
+*   removed legacy namespace
+
 0.0.2
 =====
 
