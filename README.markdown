@@ -1,13 +1,16 @@
-= ohash
+ohash
+=====
 
 * http://github.com/karottenreibe/ohash
 
-== DESCRIPTION:
+Description
+-----------
 
 OpenHash (short: ohash) is a simple, enhanced hash structure with the direct
 member access of OpenStruct, but without all the restrictions.
 
-== SYNOPSIS:
+Synopsis
+--------
 
     require 'rubygems'
     require 'ohash'
@@ -23,11 +26,14 @@ member access of OpenStruct, but without all the restrictions.
     o.merge!({:goo => 23})
     o.goo  #=> 23
 
-== INSTALL:
+Installing
+----------
 
-* sudo gem install karottenreibe-ohash --source http://gems.github.com
+*   sudo gem install karottenreibe-ohash --source http://gems.github.com
+*   sudo gem install ohash
 
-== LICENSE:
+License
+-------
 
 /*---- DON'T PANIC License 1.1 -----------
 
