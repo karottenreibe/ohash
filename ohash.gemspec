@@ -14,13 +14,13 @@ Gem::Specification.new do |s|
   s.email = %q{karottenreibe@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-     "README.txt"
+     "README.markdown"
   ]
   s.files = [
-    "History.txt",
+    "HISTORY.markdown",
      "LICENSE.txt",
      "Manifest.txt",
-     "README.txt",
+     "README.markdown",
      "Rakefile",
      "VERSION",
      "lib/ohash.rb",
