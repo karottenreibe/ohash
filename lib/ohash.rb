@@ -3,7 +3,7 @@
 # Since I personally hate OpenStructs, this is a
 # Hash with the same features, but it's mergeable etc...
 #
-class Sif::OpenHash < Hash
+class OpenHash < Hash
 
     def method_missing meth, *args
         method = meth.to_s

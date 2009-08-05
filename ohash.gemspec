@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/karottenreibe/vim-syntax}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
+  s.rubyforge_project = %q{ohash}
   s.rubygems_version = %q{1.3.4}
   s.summary = %q{A simple, enhanced hash structure with the direct member access of OpenStruct, but without all the restrictions.}
 
