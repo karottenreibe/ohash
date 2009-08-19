@@ -82,13 +82,16 @@ class OpenHash
     protected
 
     #
-    # Emulates [...], ...=, ...!, ...?, _... methods.
+    # Emulates [...], ...=, ...!, ...?, _... and
+    # direct member access methods.
     #
     def method_missing( meth, *args, &block )
         method = meth.to_s
 
         case method
-        when %r{^_|^\[\]=?$}
+        when *%w{[] []=}
+            @hash.send(meth, *args, &block)
+        when %r{^_}
             @hash.send(method[1..-1], *args, &block)
         when %r{.=$}
             super unless args.length == 1
