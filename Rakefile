@@ -25,3 +25,7 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
+task :test do
+    sh 'bacon -Ilib test/test_*.rb'
+end
+
