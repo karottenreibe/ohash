@@ -33,21 +33,17 @@ require 'delegate'
 #   o.bla?          #=> true
 #   o.bla?.goo?     #=> true
 #
-# * Predefined methods
-#
-#   o.to_s
-#   o.inspect
-#   o.to_h
-#   o.to_hash
-#   o.as_hash
-#   o.__send__(:something)
-#   o.__id__
-#   o.class
-#
 class OpenHash
 
-    # Thank you Jim Weirich (http://onestepback.org/index.cgi/Tech/Ruby/BlankSlate.rdoc)
-    instance_methods.each { |m| undef_method m unless m =~ /^__|^is_a?$|^class$/ }
+    class << self
+
+        def []( *args )
+            o = OpenHash.new
+            o.instance_variable_set(:@hash, Hash[*args])
+            o
+        end
+
+    end
 
     #
     # Same as for Hash.
@@ -92,7 +88,13 @@ class OpenHash
         when *%w{[] []=}
             @hash.send(meth, *args, &block)
         when %r{^_}
-            @hash.send(method[1..-1], *args, &block)
+            ret = @hash.send(method[1..-1], *args, &block)
+
+            if ret.respond_to?(:to_ohash) and meth != :_default
+                ret.to_ohash
+            else
+                ret
+            end
         when %r{.=$}
             super unless args.length == 1
             @hash[method[0...-1].to_sym] = args.first
@@ -111,7 +113,7 @@ end
 
 class Hash
     def to_ohash
-        OpenHash.new._merge(self)
+        OpenHash[self]
     end
 end
 
