@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ohash}
-  s.version = "0.0.3"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Fabian Streitel"]
-  s.date = %q{2009-08-05}
+  s.date = %q{2009-08-24}
   s.description = %q{A simple, enhanced hash structure with the direct member access of OpenStruct, but without all the restrictions.}
   s.email = %q{karottenreibe@gmail.com}
   s.extra_rdoc_files = [
@@ -24,7 +24,8 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/ohash.rb",
-     "ohash.gemspec"
+     "ohash.gemspec",
+     "test/test_ohash.rb"
   ]
   s.homepage = %q{http://github.com/karottenreibe/vim-syntax}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -32,6 +33,9 @@ Gem::Specification.new do |s|
   s.rubyforge_project = %q{ohash}
   s.rubygems_version = %q{1.3.4}
   s.summary = %q{A simple, enhanced hash structure with the direct member access of OpenStruct, but without all the restrictions.}
+  s.test_files = [
+    "test/test_ohash.rb"
+  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
