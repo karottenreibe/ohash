@@ -1,3 +1,10 @@
+1.0.0
+=====
+
+*   changed whole functionality
+*   now works as wrapper to hash
+*   added _..., ...! and ...? methods
+
 0.0.3
 =====
 
