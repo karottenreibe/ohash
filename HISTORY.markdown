@@ -1,3 +1,8 @@
+1.0.1
+=====
+
+*   minor mistake corrected
+
 1.0.0
 =====
 
